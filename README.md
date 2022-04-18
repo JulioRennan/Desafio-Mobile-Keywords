@@ -1,11 +1,12 @@
 
-Desafio foi proposto pela empresa  **Keyworks**. Consiste em consumir a **API da SpaceX** e extrair informações básicas sobre os próximos lançamentos de foguetes e mostrar seu local de lançamento utilzando a **API do Google Maps**, seguindo as especificações de layout definidas.
+Desafio foi proposto pela empresa  **Keyworks**. Consiste em consumir a **API da SpaceX** e extrair informações básicas sobre os próximos lançamentos de foguetes e mostrar seu local de lançamento utilzando a **API do Google Maps**, seguindo as especificações de layout definidas. 
+
+**PS:** Afim de simplificar a avaliação, a chave de API do Google foi exposta no repositório. Mas ela possúi vínculo com uma conta sem informações de fautramento e com escopo definido.
 
 Tabela de conteúdos
 =================
 <!--ts-->
    * [Instruções de Uso](#instruções-de-uso)
-   * [Telas](#telas)
    * [Pacotes fundamentais para o projeto](#pacotes-fundamentais-para-o-projeto)
    * [Estrutura do projeto (Modular)](#estrutura-do-projeto)
  
@@ -15,8 +16,9 @@ Tabela de conteúdos
  - Tenha o [**Flutter SDK**](https://flutter.dev/docs/get-started/install), instalado em sua máquina.
  - Selecione o Device que será usado para o teste, recomendo o [**AVD Manager**](https://developer.android.com/studio/run/managing-avds?hl=pt-br) do Android Studio.
  - Clone o repositório e execute o comando ````flutter run```` na pasta raiz do repositório.
-##
-# Telas
+
+
+
 
 
 ## Pacotes fundamentais para o projeto.
