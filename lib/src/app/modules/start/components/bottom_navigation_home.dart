@@ -9,6 +9,7 @@ import 'rounded_icon.dart';
 class BottomNavigationHome extends StatelessWidget {
   BottomNavigationHome({Key? key}) : super(key: key);
   final startController = Modular.get<StartController>();
+  final homeController = Modular.get<HomeController>();
   @override
   Widget build(BuildContext context) {
     return Observer(builder: (context) {
@@ -19,6 +20,17 @@ class BottomNavigationHome extends StatelessWidget {
         unselectedItemColor: context.lightColorSecondary,
         onTap: (index) {
           if (index == startController.currentPage) return;
+          if (index == 1 && homeController.lastLaunchpad == null) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text(
+                  'Selecione um lançamento para poder visualizar o mapa',
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            );
+            return;
+          }
           startController.navigatoIndex(index);
         },
         items: [
