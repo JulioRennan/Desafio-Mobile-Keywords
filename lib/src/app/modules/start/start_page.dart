@@ -14,11 +14,7 @@ class StartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PageView(
-        physics: const NeverScrollableScrollPhysics(),
-        controller: startController.pageController,
-        children: const [HomePage(), MapsPage(), ConfigPage()],
-      ),
+      body: const RouterOutlet(),
       bottomNavigationBar: BottomNavigationHome(),
     );
   }
