@@ -1,5 +1,4 @@
 import 'package:desafio_keyworks_mobile/src/app/modules/home/home_controller.dart';
-import 'package:desafio_keyworks_mobile/src/app/modules/maps/maps_controller.dart';
 import 'package:desafio_keyworks_mobile/src/core/models/launch_entity.dart';
 import 'package:desafio_keyworks_mobile/src/utils/build_context_extensions.dart';
 import 'package:desafio_keyworks_mobile/src/utils/enums.dart';
@@ -13,7 +12,6 @@ class LaunchListTile extends StatelessWidget {
   final LaunchEntity launchEntity;
   final homeController = Modular.get<HomeController>();
   final startController = Modular.get<StartController>();
-  final mapsController = Modular.get<MapController>();
 
   LaunchListTile(this.launchEntity, {Key? key}) : super(key: key);
 
@@ -55,8 +53,7 @@ class LaunchListTile extends StatelessWidget {
         onTap: () async {
           await homeController.getLaunchpadById(launchEntity);
           if (homeController.lastLaunchpad != null) {
-            mapsController.setLaunchPad(homeController.lastLaunchpad!);
-            startController.setPage(1);
+            startController.navigatoIndex(1);
           }
         },
       ),

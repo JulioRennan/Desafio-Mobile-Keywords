@@ -4,6 +4,7 @@ import 'package:desafio_keyworks_mobile/src/core/models/notices_entity.dart';
 import 'package:desafio_keyworks_mobile/src/core/repositories/interfaces/ilaunch_repository.dart';
 import 'package:desafio_keyworks_mobile/src/core/repositories/interfaces/inews_repository.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
 import '../../../utils/enums.dart';
 part 'home_controller.g.dart';
@@ -12,10 +13,10 @@ class HomeController = _HomeControllerBase with _$HomeController;
 
 abstract class _HomeControllerBase with Store {
   /// Repository related to News
-  final INewsRepository _newsRepository;
+  final INewsRepository _newsRepository = Modular.get<INewsRepository>();
 
   /// Repository related to Launch
-  final ILaunchRepository _launchRepository;
+  final ILaunchRepository _launchRepository = Modular.get<ILaunchRepository>();
 
   /// Simple 'cache' on memory with all latest launch pads selecteds by user
   List<LaunchpadEntity> launchPads = [];
@@ -40,7 +41,7 @@ abstract class _HomeControllerBase with Store {
   /// Verify if has previous page
   bool get isCanPreviousPage => currentIndex > 0;
 
-  _HomeControllerBase(this._newsRepository, this._launchRepository) {
+  _HomeControllerBase() {
     getNextLaunchs();
   }
 

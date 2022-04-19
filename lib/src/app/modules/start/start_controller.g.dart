@@ -28,11 +28,11 @@ mixin _$StartController on _StartBaseController, Store {
       ActionController(name: '_StartBaseController');
 
   @override
-  dynamic setPage(int index) {
+  dynamic navigatoIndex(int index) {
     final _$actionInfo = _$_StartBaseControllerActionController.startAction(
-        name: '_StartBaseController.setPage');
+        name: '_StartBaseController.navigatoIndex');
     try {
-      return super.setPage(index);
+      return super.navigatoIndex(index);
     } finally {
       _$_StartBaseControllerActionController.endAction(_$actionInfo);
     }

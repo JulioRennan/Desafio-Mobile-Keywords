@@ -43,7 +43,7 @@ abstract class _AppControllerBase with Store {
   navigateToInitialPage() async {
     await _getAppConfig();
     if (isLogged) {
-      Modular.to.navigate('/start');
+      Modular.to.navigate('/start/home');
     } else {
       Modular.to.navigate('/login');
     }

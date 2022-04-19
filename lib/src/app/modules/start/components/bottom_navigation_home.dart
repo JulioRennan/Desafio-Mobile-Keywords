@@ -31,7 +31,7 @@ class BottomNavigationHome extends StatelessWidget {
             );
             return;
           }
-          startController.setPage(index);
+          startController.navigatoIndex(index);
         },
         items: [
           BottomNavigationBarItem(
